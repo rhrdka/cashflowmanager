@@ -1056,27 +1056,18 @@
         // Set tanggal hari ini sebagai default
         document.getElementById('date').valueAsDate = new Date();
 
-        // Load data dari storage yang persisten
-        async function loadData() {
-            try {
-                const result = await window.storage.get('cashflow-transactions');
-                if (result && result.value) {
-                    transactions = JSON.parse(result.value);
-                    updateAllUI();
-                }
-            } catch (error) {
-                console.log('No existing data found, starting fresh');
+        // Load data dari localStorage
+        function loadData() {
+            const saved = localStorage.getItem('cashflowTransactions');
+            if (saved) {
+                transactions = JSON.parse(saved);
+                updateAllUI();
             }
         }
 
-        // Simpan data ke storage yang persisten
-        async function saveData() {
-            try {
-                await window.storage.set('cashflow-transactions', JSON.stringify(transactions));
-            } catch (error) {
-                console.error('Error saving data:', error);
-                showNotification('Gagal menyimpan data', 'error');
-            }
+        // Simpan data ke localStorage
+        function saveData() {
+            localStorage.setItem('cashflowTransactions', JSON.stringify(transactions));
         }
 
         // Switch page
@@ -1103,7 +1094,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             updateCategories();
             document.getElementById('date').valueAsDate = new Date();
-            loadData();
         });
 
         // Type selector
@@ -1668,4 +1658,5 @@
         loadData();
     </script>
 </body>
-</html>
+
+                    </html>
