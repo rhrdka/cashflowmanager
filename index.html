@@ -14,8 +14,8 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #0a0e27;
-            color: #e4e4e7;
+            background: #f8fafc;
+            color: #1e293b;
             min-height: 100vh;
             padding: 20px;
         }
@@ -27,14 +27,14 @@
 
         .header {
             margin-bottom: 30px;
-            border-bottom: 1px solid #27272a;
+            border-bottom: 2px solid #e2e8f0;
             padding-bottom: 20px;
         }
 
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 8px;
-            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -44,17 +44,18 @@
 
         .header p {
             font-size: 1em;
-            color: #71717a;
+            color: #64748b;
         }
 
         .navigation {
             display: flex;
             gap: 12px;
             margin-bottom: 30px;
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid #27272a;
-            border-radius: 12px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
             padding: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .nav-btn {
@@ -62,8 +63,8 @@
             padding: 14px 20px;
             background: transparent;
             border: none;
-            border-radius: 8px;
-            color: #71717a;
+            border-radius: 12px;
+            color: #64748b;
             cursor: pointer;
             font-size: 0.95em;
             font-weight: 600;
@@ -71,13 +72,14 @@
         }
 
         .nav-btn:hover {
-            color: #e4e4e7;
-            background: rgba(255,255,255,0.05);
+            color: #1e293b;
+            background: #f1f5f9;
         }
 
         .nav-btn.active {
             background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
             color: white;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
         }
 
         .page {
@@ -96,13 +98,14 @@
         }
 
         .card {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid #27272a;
+            background: white;
+            border: 1px solid #e2e8f0;
             border-radius: 16px;
             padding: 20px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .card::before {
@@ -111,8 +114,8 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            height: 4px;
+            background: var(--accent-color);
             opacity: 0;
             transition: opacity 0.3s;
         }
@@ -123,8 +126,8 @@
 
         .card:hover {
             transform: translateY(-4px);
-            border-color: #3f3f46;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border-color: #cbd5e1;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
         }
 
         .card-header {
@@ -142,13 +145,13 @@
             align-items: center;
             justify-content: center;
             font-size: 1.5em;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
         }
 
         .card-title {
             font-size: 0.875em;
-            color: #a1a1aa;
+            color: #64748b;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             font-weight: 600;
@@ -194,17 +197,18 @@
         }
 
         .input-section {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid #27272a;
+            background: white;
+            border: 1px solid #e2e8f0;
             border-radius: 16px;
             padding: 24px;
             max-width: 500px;
             margin: 0 auto;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .input-section h2 {
             margin-bottom: 24px;
-            color: #e4e4e7;
+            color: #1e293b;
             font-size: 1.5em;
             font-weight: 700;
         }
@@ -216,7 +220,7 @@
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            color: #a1a1aa;
+            color: #475569;
             font-weight: 500;
             font-size: 0.875em;
         }
@@ -226,11 +230,11 @@
         .form-group textarea {
             width: 100%;
             padding: 12px 16px;
-            background: #0f172a;
-            border: 1px solid #27272a;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
             border-radius: 8px;
             font-size: 1em;
-            color: #e4e4e7;
+            color: #1e293b;
             transition: all 0.3s;
         }
 
@@ -239,7 +243,8 @@
         .form-group textarea:focus {
             outline: none;
             border-color: #3b82f6;
-            background: #1e293b;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
 
         .form-group textarea {
@@ -254,7 +259,7 @@
             gap: 12px;
             margin-bottom: 24px;
             padding: 4px;
-            background: #0f172a;
+            background: #f1f5f9;
             border-radius: 10px;
         }
 
@@ -266,7 +271,7 @@
             cursor: pointer;
             font-size: 0.95em;
             font-weight: 600;
-            color: #71717a;
+            color: #64748b;
             transition: all 0.3s;
             display: flex;
             align-items: center;
@@ -275,19 +280,21 @@
         }
 
         .type-btn:hover {
-            color: #e4e4e7;
-            background: rgba(255,255,255,0.05);
+            color: #1e293b;
+            background: #e2e8f0;
         }
 
         .type-btn.active {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
             border-color: #10b981;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
         }
 
         .type-btn[data-type="expense"].active {
             background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
             border-color: #f43f5e;
+            box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
         }
 
         .submit-btn {
@@ -315,16 +322,17 @@
         }
 
         .chart-container {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid #27272a;
+            background: white;
+            border: 1px solid #e2e8f0;
             border-radius: 16px;
             padding: 28px;
             margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .chart-container h2 {
             margin-bottom: 24px;
-            color: #e4e4e7;
+            color: #1e293b;
             font-size: 1.5em;
             font-weight: 700;
         }
@@ -336,10 +344,11 @@
         }
 
         .transactions-section {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid #27272a;
+            background: white;
+            border: 1px solid #e2e8f0;
             border-radius: 16px;
             padding: 28px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .section-header {
@@ -350,7 +359,7 @@
         }
 
         .section-header h2 {
-            color: #e4e4e7;
+            color: #1e293b;
             font-size: 1.5em;
             font-weight: 700;
         }
@@ -364,46 +373,49 @@
 
         .filter-btn {
             padding: 10px 18px;
-            border: 1px solid #27272a;
-            background: #0f172a;
+            border: 1px solid #e2e8f0;
+            background: white;
             border-radius: 8px;
             cursor: pointer;
             font-size: 0.875em;
-            color: #a1a1aa;
+            color: #64748b;
             transition: all 0.3s;
             font-weight: 500;
         }
 
         .filter-btn:hover {
-            background: #1e293b;
-            color: #e4e4e7;
+            background: #f8fafc;
+            color: #1e293b;
+            border-color: #cbd5e1;
         }
 
         .filter-btn.active {
             background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
             color: white;
             border-color: #3b82f6;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
         }
 
         .search-box {
             flex: 1;
             min-width: 200px;
             padding: 10px 16px;
-            background: #0f172a;
-            border: 1px solid #27272a;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
             border-radius: 8px;
             font-size: 0.875em;
-            color: #e4e4e7;
+            color: #1e293b;
         }
 
         .search-box:focus {
             outline: none;
             border-color: #3b82f6;
-            background: #1e293b;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
 
         .search-box::placeholder {
-            color: #52525b;
+            color: #94a3b8;
         }
 
         .export-btn {
@@ -436,17 +448,17 @@
         }
 
         .transaction-list::-webkit-scrollbar-track {
-            background: #0f172a;
+            background: #f1f5f9;
             border-radius: 4px;
         }
 
         .transaction-list::-webkit-scrollbar-thumb {
-            background: #27272a;
+            background: #cbd5e1;
             border-radius: 4px;
         }
 
         .transaction-list::-webkit-scrollbar-thumb:hover {
-            background: #3f3f46;
+            background: #94a3b8;
         }
 
         .transaction-item {
@@ -454,13 +466,13 @@
             grid-template-columns: auto 1fr auto auto;
             gap: 16px;
             padding: 18px;
-            border-bottom: 1px solid #27272a;
+            border-bottom: 1px solid #f1f5f9;
             align-items: center;
             transition: all 0.2s;
         }
 
         .transaction-item:hover {
-            background: rgba(255,255,255,0.02);
+            background: #f8fafc;
         }
 
         .transaction-icon {
@@ -494,13 +506,13 @@
 
         .transaction-description {
             font-weight: 600;
-            color: #e4e4e7;
+            color: #1e293b;
             font-size: 1.05em;
         }
 
         .transaction-meta {
             font-size: 0.85em;
-            color: #71717a;
+            color: #64748b;
         }
 
         .transaction-category {
@@ -537,12 +549,12 @@
         .action-btn {
             width: 36px;
             height: 36px;
-            border: 1px solid #27272a;
+            border: 1px solid #e2e8f0;
             border-radius: 8px;
             cursor: pointer;
             font-size: 1em;
             transition: all 0.2s;
-            background: #0f172a;
+            background: white;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -550,7 +562,7 @@
 
         .action-btn:hover {
             transform: scale(1.05);
-            background: #1e293b;
+            background: #f8fafc;
         }
 
         .edit-btn {
@@ -612,7 +624,7 @@
         .empty-state {
             text-align: center;
             padding: 80px 20px;
-            color: #52525b;
+            color: #94a3b8;
         }
 
         .empty-state-icon {
@@ -632,7 +644,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0,0,0,0.5);
             backdrop-filter: blur(4px);
             z-index: 999;
             align-items: center;
@@ -644,13 +656,13 @@
         }
 
         .modal-content {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid #27272a;
+            background: white;
+            border: 1px solid #e2e8f0;
             border-radius: 16px;
             padding: 32px;
             max-width: 420px;
             width: 90%;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
 
         .modal-header {
@@ -658,13 +670,13 @@
         }
 
         .modal-header h3 {
-            color: #e4e4e7;
+            color: #1e293b;
             font-size: 1.4em;
             font-weight: 700;
         }
 
         .modal-content p {
-            color: #a1a1aa;
+            color: #64748b;
             line-height: 1.6;
             margin-bottom: 24px;
         }
@@ -690,12 +702,12 @@
         }
 
         .modal-btn.cancel {
-            background: #27272a;
-            color: #e4e4e7;
+            background: #f1f5f9;
+            color: #475569;
         }
 
         .modal-btn.cancel:hover {
-            background: #3f3f46;
+            background: #e2e8f0;
         }
 
         .modal-btn.confirm {
@@ -711,14 +723,15 @@
         }
 
         .analysis-card {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid #27272a;
+            background: white;
+            border: 1px solid #e2e8f0;
             border-radius: 16px;
             padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .analysis-card h3 {
-            color: #e4e4e7;
+            color: #1e293b;
             font-size: 1.2em;
             margin-bottom: 16px;
             font-weight: 700;
@@ -728,7 +741,7 @@
             display: flex;
             justify-content: space-between;
             padding: 12px 0;
-            border-bottom: 1px solid #27272a;
+            border-bottom: 1px solid #f1f5f9;
         }
 
         .analysis-item:last-child {
@@ -736,12 +749,12 @@
         }
 
         .analysis-label {
-            color: #a1a1aa;
+            color: #64748b;
             font-size: 0.9em;
         }
 
         .analysis-value {
-            color: #e4e4e7;
+            color: #1e293b;
             font-weight: 600;
         }
 
@@ -1056,18 +1069,27 @@
         // Set tanggal hari ini sebagai default
         document.getElementById('date').valueAsDate = new Date();
 
-        // Load data dari localStorage
-        function loadData() {
-            const saved = localStorage.getItem('cashflowTransactions');
-            if (saved) {
-                transactions = JSON.parse(saved);
-                updateAllUI();
+        // Load data dari storage yang persisten
+        async function loadData() {
+            try {
+                const result = await window.storage.get('cashflow-transactions');
+                if (result && result.value) {
+                    transactions = JSON.parse(result.value);
+                    updateAllUI();
+                }
+            } catch (error) {
+                console.log('No existing data found, starting fresh');
             }
         }
 
-        // Simpan data ke localStorage
-        function saveData() {
-            localStorage.setItem('cashflowTransactions', JSON.stringify(transactions));
+        // Simpan data ke storage yang persisten
+        async function saveData() {
+            try {
+                await window.storage.set('cashflow-transactions', JSON.stringify(transactions));
+            } catch (error) {
+                console.error('Error saving data:', error);
+                showNotification('Gagal menyimpan data', 'error');
+            }
         }
 
         // Switch page
@@ -1094,6 +1116,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             updateCategories();
             document.getElementById('date').valueAsDate = new Date();
+            loadData();
         });
 
         // Type selector
@@ -1336,7 +1359,7 @@
                         legend: {
                             position: 'bottom',
                             labels: {
-                                color: '#a1a1aa',
+                                color: '#64748b',
                                 font: { size: 12, weight: '600' },
                                 padding: 15
                             }
@@ -1409,7 +1432,7 @@
                     plugins: {
                         legend: {
                             labels: {
-                                color: '#a1a1aa',
+                                color: '#64748b',
                                 font: { size: 12, weight: '600' }
                             }
                         }
@@ -1417,9 +1440,9 @@
                     scales: {
                         y: {
                             beginAtZero: true,
-                            grid: { color: '#27272a' },
+                            grid: { color: '#f1f5f9' },
                             ticks: {
-                                color: '#71717a',
+                                color: '#64748b',
                                 callback: function(value) {
                                     return 'Rp ' + (value / 1000000).toFixed(1) + 'jt';
                                 }
@@ -1427,7 +1450,7 @@
                         },
                         x: {
                             grid: { display: false },
-                            ticks: { color: '#71717a' }
+                            ticks: { color: '#64748b' }
                         }
                     }
                 }
@@ -1465,7 +1488,7 @@
                         legend: {
                             position: 'bottom',
                             labels: {
-                                color: '#a1a1aa',
+                                color: '#64748b',
                                 font: { size: 12, weight: '600' },
                                 padding: 10
                             }
@@ -1527,7 +1550,7 @@
                     plugins: {
                         legend: {
                             labels: {
-                                color: '#a1a1aa',
+                                color: '#64748b',
                                 font: { size: 12, weight: '600' }
                             }
                         }
@@ -1535,9 +1558,9 @@
                     scales: {
                         y: {
                             beginAtZero: true,
-                            grid: { color: '#27272a' },
+                            grid: { color: '#f1f5f9' },
                             ticks: {
-                                color: '#71717a',
+                                color: '#64748b',
                                 callback: function(value) {
                                     return 'Rp ' + (value / 1000000).toFixed(1) + 'jt';
                                 }
@@ -1545,7 +1568,7 @@
                         },
                         x: {
                             grid: { display: false },
-                            ticks: { color: '#71717a' }
+                            ticks: { color: '#64748b' }
                         }
                     }
                 }
